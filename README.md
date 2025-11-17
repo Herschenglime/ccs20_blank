@@ -1,0 +1,5 @@
+# CCS20 Template
+This repository is based on the blinky demo with some changes to make the naming more generic. It contains the minimum possible setup for compiling and running code for the Tiva-C Launchpad with CCS20.
+
+## Prerequisites
+CCS20 by default does not ship with the compiler used on CCS12.8 for the Launchpad. The new, clang-based compiler is not compatible and does not allow for debugging of the TM4C devices. To fix this, you must install the arm cgt (https://www.ti.com/tool/ARM-CGT) to your standard ti install path and [update the ccs20 search path](https://e2e.ti.com/support/processors-group/processors/f/processors-forum/1485933/ccstudio-ccs-theia-does-not-contain-ti-arm-compiler-for-arm-cortex-tiva-c?tisearch=e2e-sitesearch&keymatch=CCSTUDIO%25252525252520ek-tm4c#) to use the correct compiler. After that, this should build, flash, and debug without issue.
